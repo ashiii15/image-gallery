@@ -15,9 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .image{
-    width: 250px;
+    width: 100px;
     height: 400px;
     border-radius: 50px;
     margin: 12px;
@@ -25,23 +26,39 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: width 0.5s;
+    position: relative;
 
 }
-:nth-child(2){
+.image:nth-child(2){
     background: url(/portfolio1/images/shah-rukh-khan.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-:nth-child(3){
+.image:nth-child(3){
     background: url(/portfolio1/images/download\ \(2\).jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-:nth-child(4){
+.image:nth-child(4){
     background: url(/portfolio1/images/images.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.image:hover{
+    width: 300px;
+    cursor: pointer;
+}
+.image-gallery h4{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+}
+.image:hover h4{
+    bottom: 15px;
+    opacity: 1;
+    color: #000;
 }
